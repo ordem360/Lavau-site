@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { Menu } from 'lucide-react'
 
 export default function Navbar({
@@ -18,7 +19,7 @@ export default function Navbar({
         <div className="h-28 flex items-center justify-between pt-2">
 
           {/* LOGO */}
-          <a
+          <Link
             href="/"
             className="flex items-center"
             aria-label="Ir para a home da Lavau"
@@ -39,38 +40,38 @@ export default function Navbar({
               "
             />
 
-          </a>
+          </Link>
 
           {/* NAV DESKTOP */}
           <nav className="hidden lg:flex items-center gap-10">
 
-            <a
+            <Link
               href="/about"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
               Sobre
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/#condominios"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
               Condom&iacute;nios
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/#postos"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
               Postos
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/#videos"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
               V&iacute;deos
-            </a>
+            </Link>
 
           </nav>
 
