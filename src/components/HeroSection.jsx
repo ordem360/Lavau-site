@@ -4,7 +4,36 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Sparkles, Droplets, Wind, Smartphone } from 'lucide-react'
 
-export default function HeroSection() {
+const heroCopy = {
+  pt: {
+    badge: 'Nova experiência de conveniência pet',
+    lines: ['Mais praticidade.', 'Mais cuidado.', 'Mais conexão.'],
+    description: 'A Lavau transforma o banho do seu pet em uma experiência moderna, prática e confortável com estações self-service inteligentes para condomínios, postos e espaços urbanos.',
+    primary: 'Conheça a Lavau',
+    secondary: 'Conheça nossa visão',
+    secondaryHref: '/about',
+    features: ['Lavagem Inteligente', 'Secagem Integrada', 'Pagamento via PIX', 'Auto Sanitização'],
+    cardEyebrow: 'Lavau Experience',
+    cardTitle: 'Banho self-service inteligente para pets.',
+    timeLabel: 'Tempo médio',
+  },
+  en: {
+    badge: 'A new pet convenience experience',
+    lines: ['More convenience.', 'More care.', 'More connection.'],
+    description: 'Lavau turns pet washing into a modern, practical and comfortable experience with smart self-service stations for condos, stations and urban spaces.',
+    primary: 'Discover Lavau',
+    secondary: 'Our vision',
+    secondaryHref: '/en',
+    features: ['Smart Wash', 'Integrated Drying', 'PIX / QR Payment', 'Auto Sanitizing'],
+    cardEyebrow: 'Lavau Experience',
+    cardTitle: 'Smart self-service pet wash.',
+    timeLabel: 'Average time',
+  }
+}
+
+export default function HeroSection({ locale = 'pt' }) {
+  const copy = heroCopy[locale] || heroCopy.pt
+
   return (
     <section
       id="sobre"
@@ -40,7 +69,7 @@ export default function HeroSection() {
               <Sparkles size={16} className="text-cyan-300" />
 
               <span className="text-sm text-cyan-200 tracking-wide">
-                Nova experi&ecirc;ncia de conveni&ecirc;ncia pet
+                {copy.badge}
               </span>
 
             </motion.div>
@@ -53,14 +82,14 @@ export default function HeroSection() {
               className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05]"
             >
 
-              Mais praticidade.
+              {copy.lines[0]}
               <br />
 
-              Mais cuidado.
+              {copy.lines[1]}
               <br />
 
               <span className="text-cyan-400">
-                Mais conex&atilde;o.
+                {copy.lines[2]}
               </span>
 
             </motion.h1>
@@ -73,10 +102,7 @@ export default function HeroSection() {
               className="mt-8 text-xl text-slate-300 leading-relaxed max-w-2xl"
             >
 
-              A Lavau transforma o banho do seu pet em uma experi&ecirc;ncia
-              moderna, pr&aacute;tica e confort&aacute;vel com esta&ccedil;&otilde;es
-              self-service inteligentes para condom&iacute;nios, postos e
-              espa&ccedil;os urbanos.
+              {copy.description}
 
             </motion.p>
 
@@ -93,16 +119,16 @@ export default function HeroSection() {
                 className="px-8 py-4 rounded-full bg-cyan-400 text-black font-bold hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(34,211,238,0.25)]"
               >
 
-                Leve a Lavau para seu espa&ccedil;o
+                {copy.primary}
 
               </a>
 
               <a
-                href="/about"
+                href={copy.secondaryHref}
                 className="px-8 py-4 rounded-full border border-cyan-400/20 bg-white/5 backdrop-blur-sm hover:bg-cyan-400/10 transition duration-300"
               >
 
-                Conhe&ccedil;a nossa vis&atilde;o
+                {copy.secondary}
 
               </a>
 
@@ -118,22 +144,22 @@ export default function HeroSection() {
 
               <FeatureCard
                 icon={<Droplets size={20} />}
-                label="Lavagem Inteligente"
+                label={copy.features[0]}
               />
 
               <FeatureCard
                 icon={<Wind size={20} />}
-                label="Secagem Integrada"
+                label={copy.features[1]}
               />
 
               <FeatureCard
                 icon={<Smartphone size={20} />}
-                label="Pagamento via PIX"
+                label={copy.features[2]}
               />
 
               <FeatureCard
                 icon={<Sparkles size={20} />}
-                label="Auto Sanitiza&ccedil;&atilde;o"
+                label={copy.features[3]}
               />
 
             </motion.div>
@@ -177,11 +203,11 @@ export default function HeroSection() {
                     <div>
 
                       <p className="text-sm text-cyan-300 uppercase tracking-[0.25em]">
-                        Lavau Experience
+                        {copy.cardEyebrow}
                       </p>
 
                       <h3 className="mt-2 text-2xl font-bold">
-                        Banho self-service inteligente para pets.
+                        {copy.cardTitle}
                       </h3>
 
                     </div>
@@ -206,7 +232,7 @@ export default function HeroSection() {
               <div className="rounded-3xl border border-cyan-400/20 bg-[#07111B]/80 backdrop-blur-xl px-6 py-5 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
 
                 <p className="text-sm text-slate-400">
-                  Tempo m&eacute;dio
+                  {copy.timeLabel}
                 </p>
 
                 <h4 className="text-3xl font-black text-cyan-300 mt-1">
