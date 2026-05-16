@@ -110,10 +110,10 @@ export default function EmotionalSection() {
             className="relative"
           >
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
 
               {/* IMAGE 1 */}
-              <div className="relative rounded-[32px] overflow-hidden h-[500px] border border-cyan-400/10 bg-white/5">
+              <div className="relative rounded-[32px] overflow-hidden h-[420px] sm:h-[500px] border border-cyan-400/10 bg-white/5">
 
                 <Image
                   src="/images/emotional-1.jpg"
@@ -128,7 +128,7 @@ export default function EmotionalSection() {
               <div className="flex flex-col gap-6">
 
                 {/* IMAGE 2 */}
-                <div className="relative rounded-[32px] overflow-hidden h-[240px] border border-cyan-400/10 bg-white/5">
+                <div className="relative rounded-[32px] overflow-hidden h-[240px] sm:h-[280px] md:h-[240px] border border-cyan-400/10 bg-white/5">
 
                   <Image
                     src="/images/emotional-2.jpg"
@@ -140,7 +140,7 @@ export default function EmotionalSection() {
                 </div>
 
                 {/* CARD */}
-                <div className="rounded-[32px] border border-cyan-400/10 bg-gradient-to-br from-cyan-400/10 to-transparent backdrop-blur-xl p-8 flex-1 flex flex-col justify-between">
+                <div className="rounded-[32px] border border-cyan-400/10 bg-gradient-to-br from-cyan-400/10 to-transparent backdrop-blur-xl p-7 sm:p-8 flex-1 flex flex-col justify-between">
 
                   <div>
 
@@ -148,7 +148,7 @@ export default function EmotionalSection() {
                       Lavau Experience
                     </p>
 
-                    <h3 className="mt-5 text-3xl font-black leading-tight text-white">
+                    <h3 className="mt-5 text-3xl sm:text-4xl md:text-3xl font-black leading-tight text-white">
 
                       Cuidado urbano
                       <br />
