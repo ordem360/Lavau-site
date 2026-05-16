@@ -1,5 +1,3 @@
-//CTASection.jsx 
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -54,7 +52,7 @@ export default function CTASection() {
                 <Sparkles size={16} className="text-cyan-300" />
 
                 <span className="text-sm tracking-wide text-cyan-200">
-                  Primeira geração Lavau
+                  Solu&ccedil;&atilde;o comercial Lavau
                 </span>
 
               </div>
@@ -62,11 +60,11 @@ export default function CTASection() {
               {/* TITLE */}
               <h2 className="text-4xl md:text-6xl font-black leading-[1.05] text-white">
 
-                Lavau está chegando.
+                Instale uma Lavau.
                 <br />
 
                 <span className="text-cyan-400">
-                  Faça parte dessa nova experiência.
+                  Crie uma nova experi&ecirc;ncia pet no seu espa&ccedil;o.
                 </span>
 
               </h2>
@@ -74,8 +72,10 @@ export default function CTASection() {
               {/* DESCRIPTION */}
               <p className="mt-8 text-xl leading-relaxed text-slate-300 max-w-3xl">
 
-                Uma nova forma de cuidado pet urbano está sendo construída
-                para condomínios, postos e cidades modernas.
+                Uma solu&ccedil;&atilde;o premium para condom&iacute;nios,
+                postos e opera&ccedil;&otilde;es urbanas que querem oferecer
+                conveni&ecirc;ncia, diferencia&ccedil;&atilde;o e valor real
+                para tutores de pets.
 
               </p>
 
@@ -86,23 +86,26 @@ export default function CTASection() {
 
               <OptionCard
                 icon={<Heart size={24} />}
-                title="Tut ores & Pets"
-                description="Entre na lista de espera e acompanhe os primeiros lançamentos da Lavau."
-                button="Quero conhecer"
+                title="Para tutores"
+                description="Uma experi&ecirc;ncia pr&aacute;tica e confort&aacute;vel para resolver o banho sem bagun&ccedil;a em casa."
+                button="Conhe&ccedil;a nossa vis&atilde;o"
+                href="/about"
               />
 
               <OptionCard
                 icon={<Building2 size={24} />}
-                title="Condomínios"
-                description="Leve uma nova experiência de conveniência pet para seu empreendimento."
-                button="Falar com a Lavau"
+                title="Condom&iacute;nios"
+                description="Leve uma nova amenity pet para empreendimentos residenciais modernos."
+                button="Falar com comercial"
+                href="mailto:comercial@lavau.com.br"
               />
 
               <OptionCard
                 icon={<Fuel size={24} />}
-                title="Postos Urbanos"
-                description="Transforme seu espaço em um hub moderno de conveniência pet."
-                button="Quero ser parceiro"
+                title="Postos urbanos"
+                description="Transforme seu espa&ccedil;o em um hub moderno de conveni&ecirc;ncia pet."
+                button="Avaliar parceria"
+                href="mailto:parcerias@lavau.com.br"
               />
 
             </div>
@@ -114,34 +117,50 @@ export default function CTASection() {
               <div>
 
                 <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
-                  Urban Pet Experience
+                  Convers&atilde;o comercial
                 </p>
 
                 <h3 className="mt-4 text-3xl md:text-5xl font-black leading-tight text-white">
 
-                  Mais praticidade.
+                  Mais conveni&ecirc;ncia.
                   <br />
 
-                  Mais cuidado.
+                  Mais diferencia&ccedil;&atilde;o.
                   <br />
 
-                  Mais conexão.
+                  Mais valor para o seu espa&ccedil;o.
 
                 </h3>
 
               </div>
 
-              {/* BUTTON */}
-              <button className="group inline-flex items-center gap-4 px-10 py-5 rounded-full bg-cyan-400 text-black font-black text-lg hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(34,211,238,0.25)]">
+              {/* BUTTONS */}
+              <div className="flex flex-col sm:flex-row gap-4">
 
-                Entrar na lista de espera
+                <a
+                  href="mailto:comercial@lavau.com.br"
+                  className="group inline-flex items-center justify-center gap-4 px-10 py-5 rounded-full bg-cyan-400 text-black font-black text-lg hover:scale-105 transition duration-300 shadow-[0_0_50px_rgba(34,211,238,0.25)]"
+                >
 
-                <ArrowRight
-                  size={22}
-                  className="group-hover:translate-x-1 transition"
-                />
+                  Leve a Lavau para seu espa&ccedil;o
 
-              </button>
+                  <ArrowRight
+                    size={22}
+                    className="group-hover:translate-x-1 transition"
+                  />
+
+                </a>
+
+                <a
+                  href="/about"
+                  className="inline-flex items-center justify-center px-10 py-5 rounded-full border border-cyan-400/20 bg-white/5 backdrop-blur-xl text-white font-bold hover:bg-cyan-400/10 transition duration-300"
+                >
+
+                  Conhe&ccedil;a nossa vis&atilde;o
+
+                </a>
+
+              </div>
 
             </div>
 
@@ -155,8 +174,7 @@ export default function CTASection() {
   )
 }
 
-/* OPTION CARD */
-function OptionCard({ icon, title, description, button }) {
+function OptionCard({ icon, title, description, button, href }) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
@@ -177,28 +195,31 @@ function OptionCard({ icon, title, description, button }) {
         </div>
 
         {/* TITLE */}
-        <h3 className="text-2xl font-bold text-white">
-          {title}
-        </h3>
+        <h3
+          className="text-2xl font-bold text-white"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
 
         {/* DESCRIPTION */}
-        <p className="mt-4 text-slate-400 leading-relaxed min-h-[90px]">
-
-          {description}
-
-        </p>
+        <p
+          className="mt-4 text-slate-400 leading-relaxed min-h-[90px]"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
 
         {/* BUTTON */}
-        <button className="group/button mt-8 inline-flex items-center gap-2 text-cyan-300 font-semibold hover:text-cyan-200 transition">
+        <a
+          href={href}
+          className="group/button mt-8 inline-flex items-center gap-2 text-cyan-300 font-semibold hover:text-cyan-200 transition"
+        >
 
-          {button}
+          <span dangerouslySetInnerHTML={{ __html: button }} />
 
           <ArrowRight
             size={16}
             className="group-hover/button:translate-x-1 transition"
           />
 
-        </button>
+        </a>
 
       </div>
 

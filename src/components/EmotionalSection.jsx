@@ -81,14 +81,14 @@ export default function EmotionalSection() {
 
               <Feature
                 icon={<Heart size={18} />}
-                title="Mais proximidade"
-                description="O tutor participa ativamente do cuidado do pet."
+                title="Mais conexão"
+                description="Um momento de cuidado entre você e seu pet."
               />
 
               <Feature
                 icon={<ShieldCheck size={18} />}
-                title="Ambiente seguro e higienizado"
-                description="Auto sanitização após cada uso e operação monitorada."
+                title="Conforto de verdade"
+                description="Um espaço pensado para bem-estar, limpeza e tranquilidade."
               />
 
               <Feature

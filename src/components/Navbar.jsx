@@ -3,7 +3,10 @@
 import Image from 'next/image'
 import { Menu } from 'lucide-react'
 
-export default function Navbar() {
+export default function Navbar({
+  ctaLabel = 'Leve a Lavau para seu espaço',
+  ctaHref = 'mailto:comercial@lavau.com.br'
+}) {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
 
@@ -15,7 +18,11 @@ export default function Navbar() {
         <div className="h-28 flex items-center justify-between pt-2">
 
           {/* LOGO */}
-          <div className="flex items-center">
+          <a
+            href="/"
+            className="flex items-center"
+            aria-label="Ir para a home da Lavau"
+          >
 
             <Image
               src="/images/lavau-logo.png"
@@ -32,37 +39,37 @@ export default function Navbar() {
               "
             />
 
-          </div>
+          </a>
 
           {/* NAV DESKTOP */}
           <nav className="hidden lg:flex items-center gap-10">
 
             <a
-              href="#sobre"
+              href="/about"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
               Sobre
             </a>
 
             <a
-              href="#condominios"
+              href="/#condominios"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
-              Condomínios
+              Condom&iacute;nios
             </a>
 
             <a
-              href="#postos"
+              href="/#postos"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
               Postos
             </a>
 
             <a
-              href="#videos"
+              href="/#videos"
               className="text-slate-300 hover:text-cyan-300 transition text-sm tracking-wide"
             >
-              Vídeos
+              V&iacute;deos
             </a>
 
           </nav>
@@ -70,18 +77,21 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden lg:flex">
 
-            <button className="
-              px-6 py-3 rounded-full
-              bg-cyan-400 text-black
-              font-semibold text-sm
-              hover:scale-105
-              transition duration-300
-              shadow-[0_0_30px_rgba(34,211,238,0.18)]
-            ">
+            <a
+              href={ctaHref}
+              className="
+                px-6 py-3 rounded-full
+                bg-cyan-400 text-black
+                font-semibold text-sm
+                hover:scale-105
+                transition duration-300
+                shadow-[0_0_30px_rgba(34,211,238,0.18)]
+              "
+            >
 
-              Conheça a Lavau
+              {ctaLabel}
 
-            </button>
+            </a>
 
           </div>
 

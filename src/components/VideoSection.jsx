@@ -228,16 +228,19 @@ export default function VideoSection() {
               </div>
 
               {/* BUTTON */}
-              <button className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-cyan-400 text-black font-bold hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
+              <a
+                href="/about"
+                className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-cyan-400 text-black font-bold hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(34,211,238,0.25)]"
+              >
 
-                Ver Mais Vídeos
+                Conhe&ccedil;a nossa vis&atilde;o
 
                 <MonitorPlay
                   size={18}
                   className="group-hover:translate-x-1 transition"
                 />
 
-              </button>
+              </a>
 
             </div>
 

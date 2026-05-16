@@ -1,5 +1,3 @@
-//HeroSection.jsx
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -42,7 +40,7 @@ export default function HeroSection() {
               <Sparkles size={16} className="text-cyan-300" />
 
               <span className="text-sm text-cyan-200 tracking-wide">
-                Nova experiência de conveniência pet
+                Nova experi&ecirc;ncia de conveni&ecirc;ncia pet
               </span>
 
             </motion.div>
@@ -62,7 +60,7 @@ export default function HeroSection() {
               <br />
 
               <span className="text-cyan-400">
-                Mais conexão.
+                Mais conex&atilde;o.
               </span>
 
             </motion.h1>
@@ -75,9 +73,10 @@ export default function HeroSection() {
               className="mt-8 text-xl text-slate-300 leading-relaxed max-w-2xl"
             >
 
-              A Lavau transforma o banho do seu pet em uma experiência
-              moderna, prática e confortável — com estações self-service
-              inteligentes para condomínios, postos e espaços urbanos.
+              A Lavau transforma o banho do seu pet em uma experi&ecirc;ncia
+              moderna, pr&aacute;tica e confort&aacute;vel com esta&ccedil;&otilde;es
+              self-service inteligentes para condom&iacute;nios, postos e
+              espa&ccedil;os urbanos.
 
             </motion.p>
 
@@ -89,17 +88,23 @@ export default function HeroSection() {
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
 
-              <button className="px-8 py-4 rounded-full bg-cyan-400 text-black font-bold hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
+              <a
+                href="mailto:comercial@lavau.com.br"
+                className="px-8 py-4 rounded-full bg-cyan-400 text-black font-bold hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(34,211,238,0.25)]"
+              >
 
-                Conheça a Lavau
+                Leve a Lavau para seu espa&ccedil;o
 
-              </button>
+              </a>
 
-              <button className="px-8 py-4 rounded-full border border-cyan-400/20 bg-white/5 backdrop-blur-sm hover:bg-cyan-400/10 transition duration-300">
+              <a
+                href="/about"
+                className="px-8 py-4 rounded-full border border-cyan-400/20 bg-white/5 backdrop-blur-sm hover:bg-cyan-400/10 transition duration-300"
+              >
 
-                Ver Projeto
+                Conhe&ccedil;a nossa vis&atilde;o
 
-              </button>
+              </a>
 
             </motion.div>
 
@@ -128,7 +133,7 @@ export default function HeroSection() {
 
               <FeatureCard
                 icon={<Sparkles size={20} />}
-                label="Auto Sanitização"
+                label="Auto Sanitiza&ccedil;&atilde;o"
               />
 
             </motion.div>
@@ -149,7 +154,6 @@ export default function HeroSection() {
               {/* IMAGE */}
               <div className="relative aspect-[4/5]">
 
-                {/* TROCAR PELA FOTO PRINCIPAL */}
                 <Image
                   src="/images/hero-pet.jpg"
                   alt="Lavau Experience"
@@ -202,7 +206,7 @@ export default function HeroSection() {
               <div className="rounded-3xl border border-cyan-400/20 bg-[#07111B]/80 backdrop-blur-xl px-6 py-5 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
 
                 <p className="text-sm text-slate-400">
-                  Tempo médio
+                  Tempo m&eacute;dio
                 </p>
 
                 <h4 className="text-3xl font-black text-cyan-300 mt-1">
@@ -223,7 +227,6 @@ export default function HeroSection() {
   )
 }
 
-/* FEATURE CARD */
 function FeatureCard({ icon, label }) {
   return (
     <div className="rounded-2xl border border-cyan-400/10 bg-white/5 backdrop-blur-sm p-4 hover:bg-cyan-400/5 transition duration-300">
