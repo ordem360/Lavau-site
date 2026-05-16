@@ -9,19 +9,19 @@ import { Camera, Heart, Sparkles } from 'lucide-react'
 const galleryImages = [
   {
     src: '/images/gallery/pet-1.jpg',
-    alt: 'Pet feliz na Lavau'
+    alt: 'Mais conforto para quem faz parte da família'
   },
   {
     src: '/images/gallery/pet-2.jpg',
-    alt: 'Tutor cuidando do pet'
+    alt: 'Cuidar também é criar momentos juntos'
   },
   {
     src: '/images/gallery/pet-3.jpg',
-    alt: 'Experiência Lavau'
+    alt: 'Tecnologia, conforto e conexão'
   },
   {
     src: '/images/gallery/pet-4.jpg',
-    alt: 'Banho self-service'
+    alt: 'Conveniência pet para a vida moderna'
   },
   {
     src: '/images/gallery/pet-5.jpg',
@@ -37,7 +37,7 @@ const galleryImages = [
   },
   {
     src: '/images/gallery/pet-8.jpg',
-    alt: 'Lavau Experience'
+    alt: 'O cuidado pet evoluiu'
   }
 ]
 
